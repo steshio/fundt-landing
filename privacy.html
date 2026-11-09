@@ -116,10 +116,6 @@
     <section>
       <h2>The data we collect</h2>
       <p>
-        <strong>Website</strong> (fundt.app): this site does not collect waitlist emails.
-        To get Fundt, use the App Store button on the homepage.
-      </p>
-      <p>
         <strong>Account &amp; identity</strong> (only if you sign in): your name, email, and
         profile photo via Google or Apple through Clerk.
       </p>
@@ -133,7 +129,7 @@
       </p>
       <p>
         <strong>Product usage:</strong> coarse events such as onboarding progress and Cloud Sync
-        prompts. In Local Mode this stays on your device until you consent to Cloud Sync.
+        prompts. In Local Mode this stays on your device until you sign in.
       </p>
       <p>
         <strong>App updates:</strong> when Fundt checks for an update, our update provider, Expo,
@@ -145,10 +141,14 @@
     <section>
       <h2>How your data is stored</h2>
       <p>
-        <strong>Local Mode:</strong> all data stays on your device only. Nothing is sent to us.
+        <strong>Local Mode:</strong> if you do not sign in, your categories, budgets, transactions
+        and product usage stay on your device and are never sent to us. The app still connects to
+        two services. Expo checks for updates, as described under App updates. Clerk, our sign-in
+        provider, starts when the app opens and receives your IP address and basic device details.
+        Neither receives your budgeting data.
       </p>
       <p>
-        <strong>Cloud Sync</strong> (after consent): your profile, categories, budgets,
+        <strong>Cloud Sync</strong> (when you sign in): your profile, categories, budgets,
         transactions, and product usage data sync to Convex. Identity is managed by Clerk.
       </p>
       <p>Your session token is stored in your device encrypted keychain.</p>
@@ -157,10 +157,10 @@
     <section>
       <h2>Where your data is processed</h2>
       <p>
-        Cloud Sync uses Clerk and Convex, which process data on servers outside Rwanda. By
-        signing in and consenting to Cloud Sync, you consent to this cross-border transfer.
+        Cloud Sync uses Clerk and Convex, which process data on servers outside Rwanda. By signing in, you consent to this cross-border transfer.
       </p>
-      <p>If you prefer your data never to leave your device, use Fundt in Local Mode.</p>
+      <p>Even without signing in, the connections to Expo and Clerk described above are handled outside Rwanda.</p>
+      <p>If you prefer your categories, budgets and transactions never to leave your device, use Fundt in Local Mode.</p>
     </section>
 
     <section>
@@ -172,7 +172,7 @@
           <strong>Delete:</strong> delete your account under Privacy &amp; data. Signed-in
           accounts enter a 7-day grace period before permanent removal.
         </li>
-        <li><strong>Withdraw consent:</strong> switch to Local Mode or delete your account.</li>
+        <li><strong>Withdraw consent:</strong> sign out to go back to Local Mode, or delete your account. Signing out does not remove data already in your account.</li>
         <li><strong>Complain:</strong> contact the National Cyber Security Authority (NCSA), Rwanda.</li>
       </ul>
       <p>Email <a href="mailto:support@fundt.app">support@fundt.app</a> to exercise any right.</p>
